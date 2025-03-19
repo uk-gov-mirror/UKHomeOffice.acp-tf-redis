@@ -125,3 +125,13 @@ variable "egress_cidr_blocks" {
   type        = list(string)
   default     = ["0.0.0.0/0"]
 }
+
+variable "snapshot_window" {
+  description = "The daily time range which ElastiCache will begin taking daily snapshots"
+  default     = ""
+}
+
+variable "snapshot_retention_limit" {
+  description = "Redis only: the retention period of snapshots kept in days"
+  default     = ""
+}
