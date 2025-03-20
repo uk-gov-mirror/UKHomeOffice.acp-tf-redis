@@ -68,4 +68,11 @@ variable "auto_minor_version_upgrade" {
   description = "Should the cluster autmoatically be updated to the latest minor vesrion"
   default     = false
 }
-
+variable "snapshot_window" {
+  description = "The daily time range which ElastiCache will begin taking daily snapshots"
+  default     = ""
+}
+variable "snapshot_retention_limit" {
+  description = "Redis only: the retention period of snapshots kept in days"
+  default     = ""
+}
