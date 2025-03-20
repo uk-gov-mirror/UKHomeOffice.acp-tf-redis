@@ -51,6 +51,8 @@ resource "aws_elasticache_replication_group" "elasticache_redis_cluster_with_aut
   transit_encryption_enabled    = var.transit_encryption_enabled
   auto_minor_version_upgrade    = var.auto_minor_version_upgrade
   auth_token                    = var.auth_token
+  snapshot_retention_limit      = var.snapshot_retention_limit != "" ? var.snapshot_retention_limit : null
+  snapshot_window               = var.snapshot_window != "" ? var.snapshot_window : null
 
   tags = merge(
     var.tags,
